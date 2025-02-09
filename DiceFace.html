@@ -50,12 +50,11 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>DiceFace</h1>
+							<h1>Dice Face</h1>
 							<p><b>Brief of the game:</b> Dice Face is a top-down shooter with a unique dice mechanic. The dice mechanic gives the player randomised buffs. These buffs include double damage, increased movement speed and piercing (how many enemies the projectile can penetrate). Dice Face features other basic mechanics, such as a dash and a lunge.</p>
 							<p><b>My original work-in-progress idea:</b> My full vision involves a dice UI where the player can place buffs (the player has acquired them throughout the game) on each side of the dice. They can choose whichever combination of buffs they like. They can have more than 1 of the same buff. This way, it is controlled randomisation. Players can choose to have all six slots used for one buff if they want that buff to be perfect 100% of the time. Rolling the dice to get a buff would require filling a metre by damaging or defeating enemies.</p>
 							
-							<p><b>Dice Mechanic</b></p>
-							<p>In its current state, the Dice mechanic uses a "switch on int" node, which gets a random number from a "random integer in range" node. Which activates a buff for the correlating number. I only have three buffs now (movement speed, double damage and piercing). This current version is an incomplete prototype version.</p>
+							<p><b>Dice Mechanic</b><br>In its current state, the Dice mechanic uses a "switch on int" node, which gets a random number from a "random integer in range" node. Which activates a buff for the correlating number. I only have three buffs now (movement speed, double damage and piercing). This current version is an incomplete prototype version.</p>
 							<span class="image main"><img src="images/DiceFaceImageOne.png" alt="" /></span>
 
 							<p><b>Piercing Buff</b></p>
@@ -69,7 +68,7 @@
 							<iframe width="100%" height="600" 
 								src="https://www.youtube.com/embed/yenwXpa0Sws?mute=1">
 							</iframe>
-							<p>Dash moves can only move the same way the player moves (limited by the WASD keys).</p>
+							<p>Dash can only move the same way the player moves (limited by the WASD keys).</p>
 							<span class="image main"><img src="images/DiceFaceImageTwo.png" alt="" /></span>
 							<p>It uses the launch character node.</p>
 						
@@ -79,8 +78,19 @@
 							</iframe>
 							<p>Unlike the dash, which uses the WASD movement, the lunge moves in the direction the player is facing.</p>
 							<span class="image main"><img src="images/DiceFaceImageThree.png" alt="" /></span>
+							<p>If the player hits an enemy while lunging, the velocity will change so that the player stops when they hit the enemy, rather than bouncing off of the enemy due to the high velocity. I did this so the lunge feels more like an impact when it makes contact with an enemy rather than bouncing off the enemy as the dash does. I made it this way because the purpose of the lunge mechanic is to hit enemies with it. When the player hits an enemy with the lunge mechanic, it deals 50 damage and reloads the weapon. This mechanic incentivises the player to engage in close combat rather than playing it safe from a range. <br>Below is a video showing the lunge hitting enemies and reloading the gun. </p>
+							<iframe width="100%" height="600" 
+								src="https://www.youtube.com/embed/Iq5phXyPmOI?mute=1">
+							</iframe>
+							<p><br></p>
+							<p><b>Special Enemy</b></p>	
+							<iframe width="100%" height="600" 
+								src="https://www.youtube.com/embed/2C609Mpansg?mute=1">
+							</iframe>
+							<p>The special enemy has an area of effect that damages the player.</p>
+							<span class="image main"><img src="images/DiceFaceImageFour.png" alt="" /></span>
+							<span class="image main"><img src="images/DiceFaceImageFive.png" alt="" /></span>
 
-							
 						</div>
 					</div>
 
