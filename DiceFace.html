@@ -50,11 +50,37 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Generic Page</h1>
-							<span class="image main"><img src="images/LampPhoto.png" alt="" /></span>
-							<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique.</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<h1>DiceFace</h1>
+							<p><b>Brief of the game:</b> Dice Face is a top-down shooter with a unique dice mechanic. The dice mechanic gives the player randomised buffs. These buffs include double damage, increased movement speed and piercing (how many enemies the projectile can penetrate). Dice Face features other basic mechanics, such as a dash and a lunge.</p>
+							<p><b>My original work-in-progress idea:</b> My full vision involves a dice UI where the player can place buffs (the player has acquired them throughout the game) on each side of the dice. They can choose whichever combination of buffs they like. They can have more than 1 of the same buff. This way, it is controlled randomisation. Players can choose to have all six slots used for one buff if they want that buff to be perfect 100% of the time. Rolling the dice to get a buff would require filling a metre by damaging or defeating enemies.</p>
+							
+							<p><b>Dice Mechanic</b></p>
+							<p>In its current state, the Dice mechanic uses a "switch on int" node, which gets a random number from a "random integer in range" node. Which activates a buff for the correlating number. I only have three buffs now (movement speed, double damage and piercing). This current version is an incomplete prototype version.</p>
+							<span class="image main"><img src="images/DiceFaceImageOne.png" alt="" /></span>
+
+							<p><b>Piercing Buff</b></p>
+							<iframe width="100%" height="600" 
+								src="https://www.youtube.com/embed/2zXV0iMwCxg?mute=1">
+							</iframe>
+							<p>Piercing is one of the buffs that can be gained through the dice mechanics. The amount of piercing stacks a player has determines how many enemies the projectiles can penetrate. (The above video is an example of max piercing stacks) Below are some of the nodes that show how piercing works.</p>
+							<p>"How Many Hit" is a variable that counts how many enemies the projectile has hit. If "How Many Hit" exceeds the number of piercing stacks, the projectile will stop penetrating and destroy itself. 1 stack of piercing means the projectile can hit 2 enemies. For example, if the player has 1 stack of piercing and the projectile has hit 2 enemies, the value of "How Many Hit" will be 2, which exceeds the piercing stack of 1. Therefore, the branch condition will be true and stop penetrating (the projectile will be destroyed). This is how the number of enemies a projectile should hit before being destroyed is determined.</p>
+							
+							<p><b>Dash Mechanic</b></p>
+							<iframe width="100%" height="600" 
+								src="https://www.youtube.com/embed/yenwXpa0Sws?mute=1">
+							</iframe>
+							<p>Dash moves can only move the same way the player moves (limited by the WASD keys).</p>
+							<span class="image main"><img src="images/DiceFaceImageTwo.png" alt="" /></span>
+							<p>It uses the launch character node.</p>
+						
+							<p><b>Lunge Mechanic</b></p>
+							<iframe width="100%" height="600" 
+								src="https://www.youtube.com/embed/-0K9MnNNwrk?mute=1">
+							</iframe>
+							<p>Unlike the dash, which uses the WASD movement, the lunge moves in the direction the player is facing.</p>
+							<span class="image main"><img src="images/DiceFaceImageThree.png" alt="" /></span>
+
+							
 						</div>
 					</div>
 
